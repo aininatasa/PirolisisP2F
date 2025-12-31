@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi P2F Pirolisis</title>
+
+  <!-- CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Halaman Home */
+    .home {
+      height: 100vh;
+      background: #b2dfdb; /* hijau pastel */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .home h1 {
+      font-size: 3em;
+      color: #2e8b57;
+      margin-bottom: 20px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 30px;
+      font-size: 2.5em;
+    }
+
+    .home p {
+      margin-top: 15px;
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100vh;
+      width: 0; /* default: sembunyi */
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #2e8b57;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+     .sidebar a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #256b45;
+    }
+
+     /* Tombol garis 3 */
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      color: #2e8b57;
+      z-index: 1100;
+    }
+
+    /* Konten Section */
+    section {
+      display: none; /* default: sembunyi */
+      padding: 20px;
+    }
+    section.active {
+      display: block; /* tampil hanya kalau aktif */
+    }
+  </style>
+</head>
+<body>
+  <!-- Tombol garis 3 -->
+  <span class="menu-btn" onclick="openMenu()">☰</span>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" onclick="closeMenu()">✖ Tutup</a>
+    <a href="javascript:void(0)" onclick="showSection('berita')">Berita</a>
+    <a href="javascript:void(0)" onclick="showSection('materi')">Materi</a>
+    <a href="javascript:void(0)" onclick="showSection('video')">Video</a>
+    <a href="javascript:void(0)" onclick="showSection('bingungAI')">Bingung? Ada AI</a>
+  </div>
+
+  <!-- Halaman Home -->
+  <div class="home" id="home">
+    <h1>Pirolisis</h1>
+    <div class="icons">
+      🧴 ♻️ 🛢️
+    </div>
+    <p>Plastik • Daur Ulang • Bahan Bakar</p>
+  </div>
+
+   <!-- Section lain -->
+  <section id="berita">
+    <h2>📰 Berita</h2>
+    <article> 
+      </h3>Miris, Hanya 10 Persen Sampah Plastik Berhasil Di Daur Ulang</p>
+      <p>Dikatakan Hanif, kondisi di Indonesia tidak kalah memprihatinkan. Berdasarkan data Sistem Informasi Pengelolaan Sampah Nasional, volume sampah di Indonesia sebanyak 56,6 juta ton pada 2023. Sebanyak 10,28 juta ton atau hampir 10 persen merupakan sampah plastik yang tidak bisa diurai dalam waktu sebentar</p>
+      <a href="https://citarumharum.jabarprov.go.id/miris-hanya-10-persen-sampah-plastik-berhasil-didaur-ulang/" target="_blank">Baca Selengkapnya</a>
+  </section>
+
+  <section id="materi">
+    <h2>📘 Materi</h2>
+     <h3>Apa itu Pirolisis?</h3>
+        <p>Pirolisis adalah proses dekomposisi bahan organik dengan panas tanpa oksigen.</p>
+    </div>
+     <div class="materi-card">
+      <h3>Manfaat Pirolisis</h3>
+      <ul>
+        <li>Mengurangi limbah plastik</li>
+        <li>Menghasilkan bahan bakar alternatif</li>
+        <li>Mendukung energi berkelanjutan</li>
+      </ul>
+    </div>
+     <div class="materi-card">
+      <h3>Alat dan Bahan</h3>
+      <ul>
+        <li>Plastik sejenis</li>
+        <li>Tabung reaktor</li>
+        <li>Kompor</li>
+        <li>Tabung gas</li>
+        <li>Selang air benang falcon</li>
+        <li>Selang uap</li>
+        <li>Wadah berisi es batu</li>
+        <li>Wadah penampung bahan bakar</li>
+      </ul>
+    </div>
+      <div class="materi-card">
+      <h3>Proses Pirolisis</h3>
+      <ul>
+        <li>Pertama siapkan alat dan bahan</li>
+        <li>Siapkan sampah plastik yang satu jenis, lalu bersihkan dan potong-potong plastik tersebut supaya tidak terlalu besar saat dimasukkan ke tabung reaktor</li>
+        <li>Setelah itu, masukan plastik ke dalam tabung reaktor</li>
+        <li>Susun alat-alat dengan memasang gas pada kompor, menyimpan tabung reaktor diatas kompor, pasang selang air pada lupang uap ditabung reaktor, pasang selang uap pada selang air agar menyambung, simpan sambungan selang di wadah berisi es batu agar terrendam es batu, dan terakhir ujung selang uap dimasukan ke dalam wadah untuk hasil pirolisis</li>
+        <li>Setelah semua alat terpasang sesuai, nyalakan kompor. Panaskan dengan suhu tinggi kompor. Proses ini menyebabkan material terurai secara kimia</li>
+        <li>Kemudian tunggu sampai terlihat uap plastik mengalir lewat selang sampai ke tahap terakhir yaitu uap keluar dari selang menjadi energi yaitu bahan bakar</li>
+        <li>Minyak hasil pirolisis bisa dipakai sebagai bahan bakar alternatif.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>🎥 Video</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dWffP7oHh-k"
+            frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section id="bingungAI">
+    <h2>🤖 Bingung? Ada AI</h2>
+    <p>Ketik pertanyaanmu di bawah ini:</p>
+    <textarea id="userQuestion" rows="4" cols="50" placeholder="Tulis pertanyaan..."></textarea><br>
+    <button onclick="askAI()">Kirim</button>
+    <div id="aiAnswer" style="margin-top:20px; background:#f0f0f0; padding:10px; border-radius:5px;">
+      Jawaban AI akan muncul di sini...
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    function openMenu() {
+      document.getElementById("sidebar").style.width = "220px";
+    }
+    function closeMenu() {
+      document.getElementById("sidebar").style.width = "0";
+    }
+
+    function showSection(id) {
+      // sembunyikan Home
+      document.getElementById("home").style.display = "none";
+      // sembunyikan semua section
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      // tampilkan section sesuai id
+      document.getElementById(id).classList.add('active');
+      // tutup sidebar setelah klik
+      closeMenu();
+    }
+
+    function askAI() {
+      const question = document.getElementById('userQuestion').value;
+      const answerBox = document.getElementById('aiAnswer');
+
+      if(question.trim() === "") {
+        answerBox.innerHTML = "Silakan tulis pertanyaan dulu.";
+        return;
+      }
+
+      // Simulasi jawaban AI
+      answerBox.innerHTML = "AI menjawab: '" + question + "' adalah pertanyaan yang bagus! Silakan ke openAI";
+    }
+  </script>
+</body>
+</html>
